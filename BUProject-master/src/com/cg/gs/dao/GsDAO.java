@@ -9,7 +9,7 @@ import com.cg.gs.bean.PlayerSummary;
 import com.cg.gs.exceptions.NotFoundException;
 
 public interface GsDAO {
-	public Player savePlayer(Player player)throws NotFoundException;
+	public Player savePlayer(Player player);
 
 	public Game saveGame(Game game);
 

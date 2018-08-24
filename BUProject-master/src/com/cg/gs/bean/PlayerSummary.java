@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Map;
 
 public class PlayerSummary {
-	Player player;
-	Map<Game, HashSet<Day>> pmap;
+	private Player player;
+	private Map<Game, HashSet<Day>> pmap;
 	public PlayerSummary(Player player, Map<Game, HashSet<Day>> pmap) {
 		super();
 		this.player = player;
@@ -34,7 +34,10 @@ public class PlayerSummary {
 
 	@Override
 	public String toString() {
-		return "PlayerSummary [player=" + player + ", pmap=" + pmap + "]";
-	}
+		String s1 = null;
+		for(Game k : player.getGset()) 
+			s1 = player + "\t List of Days on which game(s) played: " +  pmap.get(k);
+		return s1;
 
+}
 }

@@ -7,18 +7,21 @@ import com.cg.gs.bean.GameSummary;
 import com.cg.gs.bean.Player;
 import com.cg.gs.bean.PlayerSummary;
 import com.cg.gs.dao.GsDAO;
-import com.cg.gs.dao.GsDAOImp;
 import com.cg.gs.exceptions.NotFoundException;
 import com.cg.gs.exceptions.WrongInputException;
 
 public class GsServiceImpl implements GsService {
-	GsDAO gsd = new GsDAOImp();
+	private GsDAO gsd;
 	public GsServiceImpl() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public void setGsd(GsDAO gsd) {
+		this.gsd = gsd;
+	}
 
 	@Override
-	public Player addPlayer(Player player) throws NotFoundException {
+	public Player addPlayer(Player player) {
 		return gsd.savePlayer(player);
 	}
 

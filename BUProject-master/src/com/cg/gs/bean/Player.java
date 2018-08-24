@@ -3,9 +3,17 @@ package com.cg.gs.bean;
 import java.util.Set;
 
 public class Player {
-	String name;
-	Set<Game> gset;
+	private String name;
+	private Set<Game> gset;
+	@Override
+	public boolean equals(Object obj) {
+		return name.equals(((Player)obj).name);
+	}
 
+	@Override
+	public int hashCode() {
+		return 1;
+	}
 	public Player(String name, Set<Game> gset) {
 		super();
 		this.name = name;
@@ -30,6 +38,6 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return "Player [name=" + name + ", gset=" + gset + "]";
+		return "Player: " + name + "\t Games played by player: " + gset;
 	}
 }

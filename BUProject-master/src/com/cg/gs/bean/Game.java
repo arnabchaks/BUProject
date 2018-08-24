@@ -1,8 +1,13 @@
 package com.cg.gs.bean;
 
 public class Game {
-	String name;
+	private String name;
 
+	
+	@Override
+	public int hashCode() {
+		return 1;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -25,7 +30,7 @@ public class Game {
 
 	@Override
 	public String toString() {
-		return "Game [name=" + name + "]";
+		return "Game: " + name;
 	}
 
 }

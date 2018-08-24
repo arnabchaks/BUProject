@@ -3,8 +3,18 @@ package com.cg.gs.bean;
 import java.util.Set;
 
 public class Day {
-	String name;
-	Set<Game> gset;
+	@Override
+	public boolean equals(Object obj) {
+		return name.equals(((Day)obj).name);
+	}
+
+	@Override
+	public int hashCode() {
+		return 1;
+	}
+
+	private String name;
+	private Set<Game> gset;
 
 	public Day(String name, Set<Game> gset) {
 		super();
@@ -30,7 +40,7 @@ public class Day {
 
 	@Override
 	public String toString() {
-		return "Day [name=" + name + ", gset=" + gset + "]";
+		return "Day: " + name + "\t Games played on the day: " + gset;
 	}
 
 }

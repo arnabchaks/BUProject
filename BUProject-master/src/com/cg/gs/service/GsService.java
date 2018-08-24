@@ -6,11 +6,12 @@ import com.cg.gs.bean.Game;
 import com.cg.gs.bean.GameSummary;
 import com.cg.gs.bean.Player;
 import com.cg.gs.bean.PlayerSummary;
+import com.cg.gs.dao.GsDAO;
 import com.cg.gs.exceptions.NotFoundException;
 import com.cg.gs.exceptions.WrongInputException;
 
 public interface GsService {
-	public Player addPlayer(Player player)throws NotFoundException;
+	public Player addPlayer(Player player);
 
 	public Game addGame(Game game);
 
@@ -23,4 +24,6 @@ public interface GsService {
 	public DaySummary getDayInfo(Day day) throws NotFoundException;
 	
 	public Boolean validateInput(String s) throws WrongInputException;
+
+	public void setGsd(GsDAO gsd);
 }

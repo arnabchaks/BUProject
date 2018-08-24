@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Map;
 
 public class DaySummary {
-	Day day;
-	Map<Game, HashSet<Player>> dmap;
+	private Day day;
+	private Map<Game, HashSet<Player>> dmap;
 
 	public DaySummary(Day day, Map<Game, HashSet<Player>> dmap) {
 		super();
@@ -35,7 +35,7 @@ public class DaySummary {
 
 	@Override
 	public String toString() {
-		return "DaySummary [day=" + day + ", dmap=" + dmap + "]";
+		return day + "\t List of Players per game: " + dmap;
 	}
 
 }

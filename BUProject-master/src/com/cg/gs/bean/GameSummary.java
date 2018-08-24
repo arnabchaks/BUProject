@@ -3,9 +3,9 @@ package com.cg.gs.bean;
 import java.util.HashSet;
 
 public class GameSummary {
-	Game game;
-	HashSet<Day> dset;
-	HashSet<Player> pset;
+	private Game game;
+	private HashSet<Day> dset;
+	private HashSet<Player> pset;
 
 	public GameSummary(Game game, HashSet<Day> dset, HashSet<Player> pset) {
 		super();
@@ -44,7 +44,7 @@ public class GameSummary {
 
 	@Override
 	public String toString() {
-		return "GameSummary [game=" + game + ", dset=" + dset + ", pset=" + pset + "]";
+		return game + "\t Played by: " + pset + "\t On: "+ dset;
 	}
 
 }
